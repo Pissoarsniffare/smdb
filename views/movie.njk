@@ -2,9 +2,13 @@
 
 {% block content %}
 <main class="wrapper">
-  <h1>{{ movie.name }}</h1>
-
-
+  <h1>{{ movie.title }}</h1>
+  <h2>Release Date</h2>
+  <p>{{ movie.release_date }}</p>
+  <h3>Movie Length</h3>
+  <p>{{ movie.lenght }} min</p>
+  <h3>Score</h3>
+  <p>{{ movie.score }}</p>
 
 </main>
 {% endblock %}

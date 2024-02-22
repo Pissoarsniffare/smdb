@@ -1,13 +1,11 @@
 {% extends "layout.njk" %}
 {% block content %}
 <main class="container">
-  <hero>
+  <header>
     <h1>Welome to {{ title }}</h1>
     <h2>{{ message }}</h2>
-    <ul>
-      {% for movie in movies %}
-        <li><a href="/movies/{{ movie.id }}">{{ movie.title }}, {{ movie.score }}, {{ movie.release_date }}</a></li>
-      {% endfor %}
-  </hero>
+  </header>
+  <p>cool lista</p>
+  <a href="/movies">CLICK HERE FOR FREE ROBUX</a>
 </main>
 {% endblock %}

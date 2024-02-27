@@ -2,11 +2,24 @@
 
 {% block content %}
 <main class="wrapper">
-    <h1>Lägg till en ny film</h1>
-    <form action="/newmovie" method="post">
-        <label for="score"></label>
-
-    </form>
-    
+  <h1>Som filmägare vill jag att min film också ska få vara med</h1>
+  <p>Formuläret visas på sidan /newmovie, men när formuläret skickas så används metoden POST för att skicka det till /movies</p>
+  <form action="/movies" method="post">
+    <div class="form-element">
+      <label for="title">Titel:</label>
+      <input type="text" name="title" id="title">
+    </div>
+    <div class="form-element">
+      <label for="release_date">Utgivningsdatum:</label>
+      <input type="date" name="release_date" id="release_date">
+    </div>
+    <div class="form-element">
+      <label for="lenght">Längd:</label>
+      <input type="text" name="lenght" id="lenght">
+    </div>
+    <div class="form-element">
+      <input type="submit" value="Lägg till film">
+    </div>
+  </form>
 </main>
 {% endblock %}

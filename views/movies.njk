@@ -1,13 +1,17 @@
 {% extends "layout.njk" %}
 {% block content %}
 <main class="container">
-  <hero>
-    <h1>Welome to {{ title }}</h1>
-    <h2>{{ message }}</h2>
-    <ul>
-      {% for movie in movies %}
-        <li><a href="/movies/{{ movie.id }}">{{ movie.title }}, {{ movie.score }}, {{ movie.release_date }}</a></li>
-      {% endfor %}
-  </hero>
+    <div style="justify-content: center; display: flex;">
+      <hero>
+        <h1>Welome to {{ title }}</h1>
+        <h2>{{ message }}</h2>
+        <ul style="list-style: none;">
+          {% for movie in movies %}
+          <li><a href="/movies/{{ movie.id }}">{{ movie.title }}, {{ movie.score }}, {{ movie.release_date }}</a></li>
+          {% endfor %}
+        </hero>
+        <a href="/newmovie">SKAPA EN NY FILM</a>
+        <a href="/newscore">RECENSERA EN FILM</a>
+      </div>
 </main>
 {% endblock %}

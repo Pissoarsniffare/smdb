@@ -1,0 +1,24 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<main class="wrapper">
+    <h1>Lägg till en ny film</h1>
+    <form action="/newscore" method="post">
+        <label for="score">score</label>
+        <input type="text" id="score" name="score" required>
+        <label for="description">Beskrivning</label>
+        <textarea name="description" id="description" cols="30" rows="10">
+        </textarea>
+        <input type="submit" value="GE FILMEN EN RECENSION">
+        <div class="form-element">
+            <label for="score">Recension:</label>
+            <select name="movie" id="movie">
+                {% for movie in movies %}
+                <option value="{{ movie.id }}">{{ movie.title }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </form>
+
+</main>
+{% endblock %}
